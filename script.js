@@ -17,7 +17,7 @@ showStep(currentStep);
 
 // Handle "next" buttons
 document.addEventListener("click", (event) => {
-  if (event.target.classList.contains("next-btn")) {
+  if (event.target.classList.contains("is-next")) {
     currentStep++;
 
     // Safety: don’t go past last step

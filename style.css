@@ -1,21 +1,27 @@
-/* BASIC RESET */
+/* ========================
+   BASIC RESET
+======================== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* PAGE LAYOUT */
+/* ========================
+   PAGE LAYOUT
+======================== */
 body {
   min-height: 100vh;
-  background: #fef6f9; /* DESIGN CHOICE: gentle pastel background */
+  background: #fef6f9; /* gentle pastel background */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* MAIN APP CONTAINER */
+/* ========================
+   MAIN APP CONTAINER
+======================== */
 #app {
   width: 100%;
   max-width: 420px;
@@ -23,9 +29,11 @@ body {
   text-align: center;
 }
 
-/* STEP HANDLING */
+/* ========================
+   STEP HANDLING
+======================== */
 .step {
-  display: none; /* hidden by default */
+  display: none; /* hide all steps by default */
   animation: fadeIn 0.5s ease forwards;
 }
 
@@ -33,7 +41,9 @@ body {
   display: block;
 }
 
-/* TEXT */
+/* ========================
+   TEXT
+======================== */
 h1 {
   margin-bottom: 1rem;
 }
@@ -43,35 +53,69 @@ p {
   line-height: 1.4;
 }
 
-/* BUTTONS */
-button {
+/* ========================
+   BUTTONS
+======================== */
+button, .btn {
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
   border-radius: 6px;
   border: none;
   cursor: pointer;
+  transition: all 0.2s ease; /* smooth hover/scale */
 }
 
-.next-btn {
-  background: #ff7aa2;
+/* Base states for all buttons */
+.btn.is-disabled {
+  opacity: 0.5;
+  pointer-events: none; /* prevents clicking */
+}
+
+.btn.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Visual importance (color, emphasis) */
+.btn.primary {
+  background: #ff7aa2; /* bright / positive / primary */
   color: white;
 }
 
-.secondary-btn {
+.btn.secondary {
   background: transparent;
   color: #444;
   border: 1px solid #ccc;
-  margin-left: 0.5rem;
 }
 
-/* BUTTON GROUP */
+/* Hover effect for active buttons */
+.btn:hover:not(.is-disabled) {
+  transform: scale(1.05);
+}
+
+/* ========================
+   BUTTON GROUPS
+======================== */
 .buttons {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
 }
 
-/* SIMPLE ANIMATION */
+.choice-list li {
+  margin-bottom: 0.8rem;
+}
+
+/* ========================
+   HIDDEN ELEMENTS
+======================== */
+.hidden-option {
+  display: none; /* will be revealed later with JS */
+}
+
+/* ========================
+   SIMPLE ANIMATION
+======================== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -82,4 +126,5 @@ button {
     transform: translateY(0);
   }
 }
+
 

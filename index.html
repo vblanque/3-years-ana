@@ -16,34 +16,54 @@
   <div id="app">
 
     <!-- STEP 1 -->
-    <!-- DESIGN CHOICE:
-         Steps are simple divs, all sharing the same class.
-         JS will decide which one is visible.
-    -->
     <div class="step active" data-step="1">
-      <h1>Hey Ana 💕</h1>
-      <p>Happy 3 years together</p>
+      <h1>Hey Ana 💕 <br>Happy 3 years together </h1>
       <p>I made a little something for you</p>
-      <button class="next-btn">Continue</button>
+      <button class="btn action is-next primary">Continue</button>
     </div>
 
     <!-- STEP 2 -->
     <div class="step" data-step="2">
-      <h1>But before that, a quick question…</h1>
-      <p>Will you be my valentine this year?</p>
+      <h1>But before that, a quick question</h1>
+      <p> 
+        You already are the woman of my dream... <br> 
+        Will you also be my valentine this year?
+      </p>
 
-      <!-- DESIGN CHOICE:
-           Buttons are plain for now.
-           Later we can make one move, shake, disappear, etc.
-      -->
       <div class="buttons">
-        <button class="next-btn">Yes 😌</button>
-        <button class="secondary-btn">No 😏</button>
+        <button class="btn action is-next primary">Yes</button>
+        <button class="btn action is-disabled secondary">No</button>
       </div>
     </div>
 
     <!-- STEP 3 -->
     <div class="step" data-step="3">
+      <div class="intro-text">
+        <p>You made the right choice</p>
+      </div>
+
+      <div class="question-list">
+        <p>What would you like to do this Saturday ?</p>
+
+        <ul class="choice-list">
+          <li>
+            <button class="btn choice is-disabled">Painting date 👩🏻‍🎨🖼️👨🏻‍🎨 </button> 
+          </li>
+          <li>
+            <button class="btn choice is-disabled">Movie night 🎬</button>
+          </li>
+          <li>
+            <button class="btn choice is-disabled">Surpise me 💖</button>
+          </li>
+          <li> <!-- will add "hidden-option" class-->
+            <button class="btn choice is-next primary"> ALL OF THEM ✨ </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- STEP X -->
+    <div class="step" data-step="4">
       <h1>💖</h1>
       <p>(More coming very soon.)</p>
     </div>
