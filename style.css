@@ -48,6 +48,10 @@ h1 {
   margin-bottom: 1rem;
 }
 
+h2 {
+  margin-bottom: 1rem;
+}
+
 p {
   margin-bottom: 1.5rem;
   line-height: 1.4;
@@ -62,34 +66,23 @@ button, .btn {
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease; /* smooth hover/scale */
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-/* Base states for all buttons */
-.btn.is-disabled {
-  opacity: 0.5;
-  pointer-events: none; /* prevents clicking */
-}
-
-.btn.is-active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Visual importance (color, emphasis) */
+/* Visual importance */
 .btn.primary {
-  background: #ff7aa2; /* bright / positive / primary */
+  background: #ff7aa2;
   color: white;
 }
 
-.btn.secondary {
-  background: transparent;
+/* Teaser buttons (clickable but not progressing) */
+.btn.is-teaser {
+  background: #ffd6e3;
   color: #444;
-  border: 1px solid #ccc;
 }
 
-/* Hover effect for active buttons */
-.btn:hover:not(.is-disabled) {
+/* Hover effect for all buttons */
+.btn:hover {
   transform: scale(1.05);
 }
 
@@ -110,8 +103,9 @@ button, .btn {
    HIDDEN ELEMENTS
 ======================== */
 .hidden-option {
-  display: none; /* will be revealed later with JS */
+  display: none; /* revealed via JS */
 }
+
 
 /* ========================
    SIMPLE ANIMATION
