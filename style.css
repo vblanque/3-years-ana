@@ -121,4 +121,29 @@ button, .btn {
   }
 }
 
+/* ========================
+   CHALET GALLERY
+======================== */
+.chalet-gallery {
+  display: flex;
+  gap: 0.75rem;           /* soft spacing between images */
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.chalet-gallery img {
+  display: block;         /* removes inline image centering quirks */
+  width: 100%;            /* equal widths */
+  flex: 1;                /* force same size */
+  border-radius: 12px;    /* small rounded corners */
+  object-fit: cover;      /* crop nicely if sizes differ */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* soft depth */
+  transition: transform 0.2s ease;
+}
+
+/* Optional: subtle hover lift */
+.chalet-gallery img:hover {
+  transform: scale(1.02);
+}
+
 
