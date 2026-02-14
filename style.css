@@ -53,7 +53,7 @@ h2 {
 }
 
 p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
   line-height: 1.4;
 }
 
@@ -104,6 +104,30 @@ button, .btn {
 ======================== */
 .hidden-option {
   display: none; /* revealed via JS */
+}
+
+/* ========================
+   MOVING BUTTONS TEASER EFFECT
+======================== */
+
+/* We need a positioning context */
+.step[data-step="2"] .buttons {
+  position: relative;
+}
+
+/* No button movement */
+.step[data-step="2"] .btn.is-teaser {
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+/* Yes button emphasis */
+.step[data-step="2"] .btn.is-next {
+  transition: transform 0.2s ease;
+}
+
+.step[data-step="2"] .btn.is-next.boost {
+  transform: scale(1.15);
 }
 
 
